@@ -8,7 +8,10 @@ public class ScannerExample {
         String name = obj.nextLine();
         System.out.print("Enter your age: ");
         int age = obj.nextInt();
-        System.out.println("Hello " + name + ", your age is " + age);
+        System.out.print("Enter your salary: ");
+        double salary = obj.nextDouble();
+        System.out.println("Hello " + name + ", your age is " + age + " Salary: " + salary);
+
         obj.close(); // // Step 4: Close the scanner (Good practice)
     }
 }

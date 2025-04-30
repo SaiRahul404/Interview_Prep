@@ -1,8 +1,11 @@
 package org.example;
+import java.util.Scanner;
 
 public class CountDigits {
     public static void main(String args[]) {
-        int number = 38752593;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value: ");
+        int number = sc.nextInt();
         int count = 0;
 
         while(number > 0) {
@@ -11,6 +14,7 @@ public class CountDigits {
         }
 
         System.out.println("Number of digits: " + count);
+        sc.close();
     }
 
     int num1 = 3982385;
