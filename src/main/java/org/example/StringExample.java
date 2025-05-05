@@ -83,13 +83,13 @@ public class StringExample {
         // "Hello" is stored in memory.
         //When " World" is added, a new string object "Hello World" is created.
 
-        String s1 = "Java";
-        String s2 = s1;
-
-        s1 = "Python";
-
-        System.out.println(s1);
-        System.out.println(s2);
+//        String s1 = "Java";
+//        String s2 = s1;
+//
+//        s1 = "Python";
+//
+//        System.out.println(s1);
+//        System.out.println(s2);
 
         // "Java" --->   s2
         // "Python" ----> s1
@@ -102,6 +102,11 @@ public class StringExample {
         // Think of the String Pool as a shared playlist on Spotify.
         //If two users add the same song, Spotify does not duplicate it; they both listen to the same track.
         //But if someone uploads a personal copy, it exists separately.
+
+        String s1 = "Hello";
+        String s4 = new String("Hello").intern();
+        System.out.println(s1 == s4); // (Now both refer to the String Pool)
+        // intern() forces the new object to be stored in the String Pool, not Heap Memory
 
     }
 }
