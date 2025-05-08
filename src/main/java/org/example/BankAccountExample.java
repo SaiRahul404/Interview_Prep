@@ -12,7 +12,7 @@ package org.example;
     }
     public void deposit(double amount) {
         if (amount > 0) {
-            balance += amount;
+            balance += amount; // balance = balance + amount
             System.out.println("Deposited: " + amount);
         } else {
             System.out.println("Invalid deposit amount!");

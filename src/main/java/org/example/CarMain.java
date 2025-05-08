@@ -6,6 +6,30 @@ class Car {
     int speed;
     String color;
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void honk() {
         System.out.println(brand + " is honking! " + speed);
     }
@@ -21,8 +45,9 @@ class Car {
 public class CarMain {
     public static void main(String[] args) {
         Car carObj = new Car();
-        carObj.brand = "Alto";
-        carObj.speed = 100;
+        carObj.setBrand("Alto");
+        carObj.setSpeed(100);
+        System.out.print(carObj.getBrand());
         carObj.color = "Blue";
         Car secondCar = new Car();
         secondCar.brand = "Toyato";

@@ -105,6 +105,7 @@ public class StringExample {
 
         String s1 = "Hello";
         String s4 = new String("Hello").intern();
+        Student student = new Student();
         System.out.println(s1 == s4); // (Now both refer to the String Pool)
         // intern() forces the new object to be stored in the String Pool, not Heap Memory
 
