@@ -2,10 +2,10 @@ package org.example;
 
 public class AbstractionExample {
     public static void main(String[] args) {
-        PaymentAbstract paymentAbstract = new CreditCardPaymentAbstract(2000.0,"23232332322333");
+        PaymentAbstract paymentAbstract = new CreditCardPaymentAbstract(2000.0, "23232332322333");
         paymentAbstract.pay();
 
-        paymentAbstract = new PayPalPaymentAbstract(3000.0,"abc@gmail.com");
+        paymentAbstract = new PayPalPaymentAbstract(3000.0, "abc@gmail.com");
         paymentAbstract.pay();
     }
 }
@@ -16,6 +16,10 @@ abstract class PaymentAbstract {
     // Constructor
     PaymentAbstract(double amount) {
         this.amount = amount;
+    }
+
+    PaymentAbstract() {
+        this.amount = 20; // default value
     }
 
     // Abstract method (must be implemented by subclasses)
